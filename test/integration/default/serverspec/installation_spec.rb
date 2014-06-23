@@ -10,6 +10,10 @@ RSpec.configure do |c|
 end
 
 describe "ROS" do
+  it 'installs base ros' do
+    expect(package('ros-indigo-desktop-full')).to be_installed
+  end
+
   it 'creates /tmp/ROS' do
     expect(File.exists?('/tmp/ROS')).to be_truthy
     # Uncomment to make it fail

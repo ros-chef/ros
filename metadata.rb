@@ -5,3 +5,5 @@ license          'BSD'
 description      'Installs/Configures ROS'
 long_description 'Installs/Configures ROS'
 version          '0.1.0'
+
+depends "apt"

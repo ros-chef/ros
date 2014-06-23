@@ -9,4 +9,5 @@
 
 ros 'indigo' do
   release 'indigo'
+  flavor node[:ros][:flavor]
 end
