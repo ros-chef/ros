@@ -1,4 +1,3 @@
-ros
-===
+# ros cookbook
 
-Basic ROS install
+Basic ROS installation via chef.
