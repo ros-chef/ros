@@ -1,1 +1,1 @@
-node[:default][:ros][:flavor]="desktop-full"
+default["ros"]["flavor"]="desktop-full"
