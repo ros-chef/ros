@@ -19,4 +19,8 @@ describe "ROS" do
     # Uncomment to make it fail
     # expect(File.exists?('/tmp/ROS2')).to be_truthy
   end
+
+  describe command('ps axjf | grep rosmaster') do
+    it { should return_stdout /rosmaster --core/ }
+  end
 end

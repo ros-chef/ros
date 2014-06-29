@@ -12,6 +12,7 @@ suites:
   - name: default
     run_list:
       - recipe[ros::default]
+      - recipe[ros::runit]
     attributes:
       ros:
         #flavor: ros-base
