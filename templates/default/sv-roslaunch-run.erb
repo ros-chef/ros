@@ -1,4 +1,4 @@
 #!/bin/bash
 exec 2>&1
 source <%= @options[:setup_bash] %>
-exec roslaunch <%= @options[:launch_options] %>
+exec <%= @options[:launch_cmd] %>

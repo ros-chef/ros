@@ -1,7 +1,7 @@
 action :enable do
   user = @new_resource.user
   setup_bash = @new_resource.setup_bash
-  launch = @new_resource.launch
+  launch_cmd = @new_resource.command || "roslaunch #{@new_resource.launch}"
 
   runit_service "roslaunch-#{user}-#{@new_resource.name}" do
     run_template_name "roslaunch"
@@ -9,7 +9,7 @@ action :enable do
 
     options({ user: user,
               setup_bash: setup_bash,
-              launch_options: launch
+              launch_cmd: launch_cmd
             })
 
     sv_dir "/home/#{user}/.ros/sv"
