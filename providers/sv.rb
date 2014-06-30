@@ -17,6 +17,8 @@ action :enable do
     owner user
     group user
 
+    cookbook "ros"
+
     action :enable
   end
 end
